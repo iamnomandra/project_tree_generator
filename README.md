@@ -37,7 +37,7 @@ Displays the complete project structure recursively while allowing specific file
 Each file displays its type, name, size, and optional description.
 
 ```text
-🐍 nom_pipeline.py          📦 39.28 KB
+🐍 pipeline.py          📦 39.28 KB
 📄 requirements.txt         📦 2.41 KB
 📦 config.json              📦 1.82 KB
 🔐 .env                     📦 0.91 KB
@@ -64,16 +64,18 @@ The tool extracts:
 Example:
 
 ```text
-🐍 nom_pipeline.py          📦 39.28 KB
-
-                    └── Class: NomPipeline
-                          └── def: __init__(self, config)
-                          └── def: process(self, document, debug=False)
-                          └── Class: PipelineError
-                                └── def: __init__(self, message, code=None)
-
-                    └── def: create_pipeline(config, debug=False)
-                          └── def: validate_config(config)
+📦 nom_idp
+├── 🔐 .env                       📦 0.00 KB  # Project config like api key, url etc..
+├── 🐍 __init__.py                📦 0.00 KB
+├── 🐍 app.py                     📦 10.79 KB  # Entry point
+🐍 pipeline.py          📦 39.28 KB
+      └── Class: Pipeline
+            └── def: __init__(self, config)
+            └── def: process(self, document, debug=False)
+            └── Class: PipelineError
+                  └── def: __init__(self, message, code=None)      
+      └── def: create_pipeline(config, debug=False)
+            └── def: validate_config(config)
 ```
 
 ---
@@ -135,12 +137,6 @@ Or provide a specific project path:
 python project_tree.py /path/to/project
 ```
 
-Windows example:
-
-```bash
-python project_tree.py C:\Projects\MyProject
-```
-
 ---
 
 ## ⚙️ Configuration
@@ -172,7 +168,7 @@ Only the Python files listed in `SPECIFIC_FILES` will have their internal classe
 
 ```python
 SPECIFIC_FILES = {
-    "nom_pipeline.py",
+    "pipeline.py",
     "app.py",
 }
 ```
@@ -181,7 +177,7 @@ For example:
 
 ```python
 SPECIFIC_FILES = {
-    "nom_pipeline.py",
+    "pipeline.py",
     "app.py",
     "config.py",
     "state_machine.py",
@@ -200,7 +196,7 @@ Descriptions can be configured through the `DESCRIPTIONS` dictionary.
 DESCRIPTIONS = {
     "app.py": "Entry point",
     "config.py": "Project configuration",
-    "nom_pipeline.py": "Main orchestration engine",
+    "pipeline.py": "Main orchestration engine",
     "ingestion": "→ Document to Receive/Load",
     "preprocessing": "→ Document to Clean/Prepare",
 }
@@ -400,4 +396,14 @@ Project
               → Parameters
 ```
 
-in one place.
+### 💬 Questions? Contributions?
+
+- Feel free to open an **Issue** or start a **Discussion** on GitHub. 
+
+--- 
+ 
+> 🚀 Ready to improve your `CLI debugging`?
+ 
+> 💡 Found this useful? Give it a ⭐ and share with your `Python friends`!
+
+> 🖂 Contact me any help 
