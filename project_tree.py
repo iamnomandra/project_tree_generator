@@ -24,13 +24,30 @@ class ProjectTree:
         "app.py": "Entry point",
         ".env": "Project config like api key, url etc..",
         "config.py": "Project config classes colors, app config etc..",
-        "pipeline.py": "Actual orchestration engine Main Orchestrator",
+        "nom_pipeline.py": "Actual orchestration engine Main Orchestrator",
         "requirements.txt": "Reproducible environment installation",
-        "pyproject.toml": "Package/project metadata + build + dependency definition"
+        "pyproject.toml": "Package/project metadata + build + dependency definition",
+        "ingestion": "→ Document to Receive/Load",
+        "preprocessing": "→ Document to Clean/Prepare",
+        "classification": "→ Document type",
+        "ocr": "→ Text extraction",
+        "layout": "→ Visual structure",
+        "extraction": "→ Semantic Fields/Entities/Tables",
+        "normalization": "→ Values standardize",
+        "validation": "→ Correctness",
+        "confidence": "→ Confidence scoring",
+        "rules": "→ Business decisions",
+        "rules_files": "→ Business decisions rules file (json, yaml etc.)",
+        "workflow": "→ State/Approval/Action",
+        "knowledge": "→ RAG/Graph/Search",
+        "storage": "→ Persistence",
+        "contracts": "→ Canonical data contracts & pipeline result schemas",
+        "observability": "→ Production telemetry: logs, metrics, traces & audit",
+        "async_execution": "→ Distributed job execution, retries, queues & workers",
     }
 
     SPECIFIC_FILES = {
-        "pipeline.py",
+        "nom_pipeline.py",
         "app.py",
     }
 
@@ -111,7 +128,7 @@ class ProjectTree:
 
                         label += (
                             f"\n{indent}└── "
-                            f"[yellow]Class: [/yellow]{node.name}"
+                            f"🔗 [yellow]Class: [/yellow]{node.name}"
                         )
 
                         # Base classes
@@ -157,7 +174,7 @@ class ProjectTree:
 
                         label += (
                             f"\n{indent}└── "
-                            f"[cyan]{prefix}[/cyan] "
+                            f"🔹 [cyan]{prefix}[/cyan] "
                             f"{node.name}"
                             f"([dim green]{params}[/dim green])"
                         )
