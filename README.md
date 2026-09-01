@@ -1,6 +1,6 @@
 # 📦 Project Tree Generator
 
-A lightweight Python CLI utility that generates a clean, Rich-powered project directory tree with:
+🐍 A Rich-powered Python CLI that visualizes project structure, file sizes, classes, functions, nested definitions, and function parameters.
 
 * 📂 Folder hierarchy
 * 📄 File listing
