@@ -306,39 +306,11 @@ Running:
 python project_tree.py .
 ```
 
-can produce an output similar to:
+## 📸 Screenshot
 
-```text
-────────────────── 📂 MYPROJECT ──────────────────
+- Main Menu Dashboard
 
-📦 myproject
-
-├── 📂 ingestion
-│   ├── 🐍 loader.py             📦 4.21 KB
-│   └── 🐍 parser.py             📦 8.17 KB
-
-├── 📂 preprocessing
-│   └── 🐍 clean.py              📦 6.42 KB
-
-├── 📂 workflow
-│   └── 🐍 state_machine.py      📦 39.28 KB
-│
-│                    └── Class: StateMachine
-│                          └── def: __init__(self, config)
-│                          └── def: transition(self, state, event)
-│                          └── Class: GuardRejectedError
-│                                └── def: __init__(self, guard, state)
-│
-├── 🐍 nom_pipeline.py           📦 39.28 KB
-│                    └── Class: NomPipeline
-│                          └── def: __init__(self, config)
-│                          └── def: process(self, document, debug=False)
-│
-├── 🐍 app.py                    📦 5.12 KB
-│                    └── def: main(path=None)
-│
-└── 📄 requirements.txt          📦 1.24 KB
-```
+   ![Screenshot 2026-09-01 202939](https://github.com/iamnomandra/project_tree_generator/blob/main/Screenshot%202026-09-01%20202939.png) 
 
 ---
 
