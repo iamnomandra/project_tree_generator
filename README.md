@@ -308,7 +308,7 @@ python project_tree.py .
 
 ## 📸 Screenshot
 
-- Main Menu Dashboard
+- Tarminal screenshot
 
    ![Screenshot 2026-09-01 202939](https://github.com/iamnomandra/project_tree_generator/blob/main/Screenshot%202026-09-01%20202939.png) 
 
