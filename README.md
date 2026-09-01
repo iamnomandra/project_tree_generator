@@ -7,9 +7,6 @@
 * 📦 File sizes
 * 📝 File/folder descriptions
 * 🐍 Python file detection
-* 🏛️ Python classes
-* ⚙️ Functions and methods
-* 🧩 Nested classes and functions
 * 🔹 Function parameters
 * 🔗 Class inheritance
 * 🎨 Rich terminal formatting
